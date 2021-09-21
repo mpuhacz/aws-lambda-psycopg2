@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: docker/build-push-action@v2
-        context: .
+        context: python3.9/
