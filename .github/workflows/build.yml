@@ -12,3 +12,4 @@ jobs:
       - uses: docker/build-push-action@v2
         with:
           context: python3.9/
+          tags: build
