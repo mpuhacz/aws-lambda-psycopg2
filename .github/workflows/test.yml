@@ -15,7 +15,7 @@ jobs:
           tags: test
       - run: echo ${{ steps.docker_build.outputs.digest }}
       - run: echo "CONTAINER_ID=`docker create test`" >> $GITHUB_ENV
-      - run: docker cp "${{ env.CONTAINER_ID }}:/world.txt"
+      - run: docker cp "${{ env.CONTAINER_ID }}:/world.txt" ./
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
