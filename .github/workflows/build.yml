@@ -17,7 +17,8 @@ jobs:
           tags: build
       - run: echo "CONTAINER_ID=`docker create build`" >> $GITHUB_ENV
       - run: docker cp "${{ env.CONTAINER_ID }}:/var/output/final/" ./
-      - run: cat build.cfg >> $GITHUB_ENV
+      - run: ls -la
+      - run: cat ./build.cfg >> $GITHUB_ENV
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
